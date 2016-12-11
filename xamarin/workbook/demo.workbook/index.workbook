@@ -1,0 +1,23 @@
+---
+uti: com.xamarin.workbook
+platforms:
+- iOS
+---
+
+```csharp
+#load "FormInit-iOS.csx"
+using Xamarin.Forms;
+```
+
+```csharp
+Entry txt = new Entry(){ Placehoder="url"};
+Button btn = new Button() { Text = "test" };
+```
+
+```csharp
+StackLayout stack = new StackLayout();
+stack.Children.Add(txt);
+page.Content = stack;
+var img = new Image() { Source = "https://nodejs.org/static/images/logo.svg" };
+
+```
