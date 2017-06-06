@@ -1,3 +1,6 @@
+/**
+A pattern using MSSQL MERGE command to check inserting or updating data 
+**/
 use GISTesting;
 CREATE NONCLUSTERED INDEX idx_DIARY_title
 ON [account].[DIARY] ([TITLE_ID],[IS_DISABLED])
