@@ -5,11 +5,11 @@ This is the lesson learned from [Jerry Wu](mailto:jerry@gis.tw)
 
 # 常見的內插理論
 1. IDW (距離反比權重法 Inverse Distance Weighted) 
- - 簡單好用
+簡單好用
 1. Kriging (克利金法)  
- - 參數需設定正確
+參數需設定正確
 1. Spline (雲形曲線法)
- - 適合大範圍
+適合大範圍
 
 # 操作 tip
  - for arcgis
