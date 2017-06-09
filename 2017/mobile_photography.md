@@ -4,11 +4,34 @@
 - 食物暖色調較可口 (冷色調無食慾)
 
 # app
+- 人像: snapseed > 美顏 > 黃油
+- 風景: snapseed > 黃油
 - 美顏相機
 - 美圖秀秀
- - 瘦臉
- - 豐胸
- - 增高
+  - 瘦臉
+  - 豐胸
+  - 增高
+- VSCO
+  - 
+- photodirector
+    - 修圖懶人綜合包
+        - object removal
+        - HDR
+        -  effects 
+        - scene (趣味實景)
+- 黃油相機
+    - 用攝影寫詩
+- snapseed
+    - 手機界的photoshop
+- foodie
+    - 美食必備
+- 海報工廠
+    - 手機排版
+- 拼立得
+    - 海報或拼貼
+- quik
+    - 超炫幻燈片
+- 
 
 # selfie
 - 側身45度，相機朝下40度
