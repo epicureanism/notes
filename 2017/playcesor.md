@@ -21,3 +21,17 @@
 ## list all actions
  - then realize the end of world
 
+# release anxious
+  - collect (dont collect those less than 2 mins)
+    - do it later, do them together
+  - action list
+    - 135 concentrate rules
+      - 1 important, 3 must, 5 errands
+      - every week choose the 1 important actions for the days of next week
+        - want to, will be satisfied(fulfill), stowed （those with high value but procrastinated for a long time)
+        
+  - attack calendar
+    - target
+    - reserving time (backward schedule)
+    - promise
+  - review and error prevention
