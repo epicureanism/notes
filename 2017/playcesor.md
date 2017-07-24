@@ -1,6 +1,7 @@
 # Time management
 - choose positively
 - avoid lazy choices
+# about choosing actions
 ## a nice imagination to your task
  - fine your personal achievement
 ## an imediate action with quick feedback
