@@ -36,3 +36,5 @@
     - reserving time (backward schedule)
     - promise
   - review and error prevention
+# presentation
+https://bit.ly/20170724time
