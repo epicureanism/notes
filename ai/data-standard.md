@@ -1,3 +1,8 @@
+---
+title: ai and ogc
+tags: ai
+notebook: ai
+---
 # OpenAPI
   - defines interface description for REST APIs
   - swagger - tools for OpenAPI
