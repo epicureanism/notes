@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace NativePCL.Droid
 {
-	[Activity (Label = "NativePCL.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Ricky.Droid", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		int count = 1;

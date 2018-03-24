@@ -14,6 +14,8 @@
 ## Shared Project
 - all the API can be shared
 
+> I personally perefer PCLs because the code is much easier to read without any compiler directives. Using MVVMCross you are able to use plenty of plugins via NuGet. So you don't need to write your own classes for camera access, showing alerts etc.
+quoted from [stakeoverflow: Xamarin Shared Library and PCL](http://stackoverflow.com/questions/32043793/xamarin-shared-library-and-pcl)
 # installation
 ## android sdk manager
 - don't install unnecessary stuffs
@@ -23,3 +25,5 @@
 # Background Knowledge
 - LLVM
 - NDK
+
+# [Native PCL demo](NativePCL/readme.md)
