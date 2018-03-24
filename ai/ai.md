@@ -61,6 +61,7 @@ notebook: ai
     - pybullet
 
 - Deep Learning
+  - [手把手教你深度學習](https://www.slideshare.net/tw_dsconf/ss-70083878)
   - Neural Network 的層級深度
   - NN 
     - input x weight = bias 
@@ -79,6 +80,18 @@ notebook: ai
         - 動量是物體的質量和速度的乘積。例如，一輛快速移動的重型卡車擁有很大的動量。
     - First DNN by Keras
       - 0123456789
+      - [實作筆記](https://github.com/epicureanism/notes/blob/master/ai/keras/readme.md)
+    - Validation Dataset
+      - 一定要分被訓練的資料及testing (驗證用)的資料
+      - 利用 model.fit 
+      - overfitting 的問題
+        - training result 有進步，但validation result 反而變差
+    - good result on training data -> good result on testing data 
+      - if no good on testing data, then
+        - regularization - weight 值不要太大，因為weight 影響很大
+        - early stopping - 避免 overfitting，見好就收(提早停止訓練)
+        - Dropout
+        - Batch Normalization 
       
 
 - Reinforcement Learning
