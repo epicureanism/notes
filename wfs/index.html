@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="row">
+        <div class="col">api url</div>
+        <div class="col">api params</div>
+      </div>
+      <div class="row">
+        <input type="text" v-model="api_url" class="col"/>
+        <input type="text" v-model="JSON.stringify(api_params)" class="col"/>
+      </div>      
+      <input type="textarea" v-model="JSON.stringify(list)" class="col" rows="10" />
+      <div id="map" class="map col"></div>
+    </div>
+    <script>
+      var map = new ol.Map({
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        target: 'map',
+        controls: ol.control.defaults({
+          attributionOptions: {
+            collapsible: false
+          }
+        }),
+        view: new ol.View({
+          center: [0, 0],
+          zoom: 2
+        })
+      });
+      Vue.prototype.$http = axios;
+      
+      var app = new Vue({
+          el: '#app',
+          data: {
+            //api_url: "https://www.ldproxy.nrw.de/kataster/flurstueck",
+            api_url: "http://www.pvretano.com/cubewerx/cubeserv/default/wfs/2.5.0/foundation/builtupa_1m",
+            api_params:{ 
+                        f: "json",
+                        startIndex: 0,
+                        count:10,
+                        version:3.2,
+                        bbox: "36.8207,-79.5854,39.7519,-74.4218"
+                        //resultType:"results"
+                      },
+            list: [{name: "..."}]
+          },
+          created: function(){
+            this.some_init_func();
+          },
+          methods: {
+              //ajax 呼叫
+              some_init_func: function(){
+                  //this 指向vue 的全堿
+                  var self = this;
+                  this.$http.get(self.api_url, {
+                      params: self.api_params
+                  },{
+                      emulateJSON:true
+                  })
+                  .then(function(response){
+                      self.list = response.data;
+                      console.log(response.data);
+                      var vectorSource = new ol.source.Vector({
+                        features: (new ol.format.GeoJSON()).readFeatures(self.list)
+                      });
+                      var vectorLayer = new ol.layer.Vector({
+                        source: vectorSource,
+                        //style: styleFunction
+                      });
+                      map.addLayer(vectorLayer);
+                  })
+                  .catch(function(error){
+                      console.log(error);
+                  });
+              }
+          }
+      })
+    </script>
+  </body>
+</html>
